@@ -8,6 +8,7 @@ public class BlockingQueueDemo {
         BlockingQueue<Integer> queue = new ArrayBlockingQueue<>(100);
 
         WriteToQueueWorker writeToQueueWorker = new WriteToQueueWorker(queue);
+
         ReadFromQueueWorker readFromQueueWorker = new ReadFromQueueWorker(queue);
 
         Thread t1 = new Thread(writeToQueueWorker);
