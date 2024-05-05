@@ -6,7 +6,6 @@ import java.util.concurrent.BlockingQueue;
 public class BlockingQueueDemo {
     public static void main(String[] args) {
         BlockingQueue<Integer> queue = new ArrayBlockingQueue<>(100);
-
         WriteToQueueWorker writeToQueueWorker = new WriteToQueueWorker(queue);
 
         ReadFromQueueWorker readFromQueueWorker = new ReadFromQueueWorker(queue);
