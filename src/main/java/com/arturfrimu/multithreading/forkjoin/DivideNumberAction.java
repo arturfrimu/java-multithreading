@@ -14,14 +14,24 @@ public class DivideNumberAction extends RecursiveAction {
 
     @Override
     protected void compute() {
-        if(value > THRESHOLD) {
+        boolean havingValue = value > THRESHOLD;
+        if (havingValue) {
             System.out.println("Halving: " + value);
 
-            DivideNumberAction leftTask = new DivideNumberAction(value/2);
-            DivideNumberAction rightTask = new DivideNumberAction(value/2);
+            DivideNumberAction leftTask = new DivideNumberAction(value / 2);
+            DivideNumberAction rightTask = new DivideNumberAction(value / 2);
             invokeAll(leftTask, rightTask);
         } else {
             System.out.println("Halving finished");
+            System.out.print("");
+        }
+    }
+
+    private static void sleep(final int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 }
