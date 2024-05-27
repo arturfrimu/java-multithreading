@@ -17,16 +17,13 @@ public class App {
             jobs.add(new Job(5));
             jobs.add(new Job(6));
 
-
             machines.add(new Machine(1, jobs));
             machines.add(new Machine(2, jobs));
             machines.add(new Machine(3, jobs));
 
-            for(Machine s: machines) {
+            for (Machine s : machines) {
                 executorService.execute(s);
             }
         }
-
-
     }
 }
