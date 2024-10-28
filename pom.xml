@@ -5,8 +5,15 @@
   <groupId>com.arturfrimu</groupId>
   <artifactId>java-multithreading</artifactId>
   <version>1.0-SNAPSHOT</version>
+
   <name>Archetype - java-multithreading</name>
-  <url>http://maven.apache.org</url>
+
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>completable-future</module>
+    <module>suleimanov</module>
+  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
